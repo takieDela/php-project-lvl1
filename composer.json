@@ -1,0 +1,15 @@
+{
+    "name": "hexlet/code",
+    "description": "First php project on hexlet.",
+    "bin": [
+        "bin/brain-games"
+    ],
+    "authors": [
+        {
+            "name": "Sofya",
+            "email": "sofya-good@mail.ru"
+        }
+    ],
+    "license": "MIT",
+    "require": {}
+}
