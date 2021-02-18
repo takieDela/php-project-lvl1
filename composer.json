@@ -2,11 +2,13 @@
     "name": "hexlet/code",
     "description": "First php project on hexlet.",
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
     ],
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/games/Even.php"
         ]
     },
     "scripts": {
