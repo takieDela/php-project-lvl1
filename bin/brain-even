@@ -10,6 +10,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function Php\Project\Lvl1\Games\Even\even_game as even_game;
+use function Php\Project\Lvl1\Games\Even\evenGame;
 
-even_game();
+evenGame();
