@@ -8,7 +8,7 @@ use const Php\Project\Lvl1\GameConfig\GAMES_TO_WIN;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime($number)
+function isPrime(int $number): bool
 {
     $middle = $number / 2;
     for ($i = 2; $i < $middle; $i++) {
@@ -19,7 +19,7 @@ function isPrime($number)
     return true;
 }
 
-function generateGameData()
+function generateGameData(): array
 {
     $gameData = [];
 
@@ -34,8 +34,9 @@ function generateGameData()
     return $gameData;
 }
 
-function primeGame()
+function primeGame(): void
 {
     $gameData = generateGameData();
     startGame(DESCRIPTION, $gameData);
+    return;
 }
