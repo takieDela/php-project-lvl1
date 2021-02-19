@@ -19,7 +19,7 @@ function startGame(string $description, array $gameData): void
         if ($answer == $rightAnswer) {
             line('Correct!');
         } else {
-            line("'{$answer} is wrong answer ;(. Correct answer was '{$rightAnswer}'.");
+            line("'{$answer}' is wrong answer ;(. Correct answer was '{$rightAnswer}'.");
             line("Let's try again, {$name}!");
             return;
         }
