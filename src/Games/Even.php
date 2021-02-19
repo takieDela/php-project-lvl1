@@ -8,12 +8,12 @@ use const Php\Project\Lvl1\GameConfig\GAMES_TO_WIN;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function isEven($number)
+function isEven(int $number): bool
 {
     return $number % 2 === 0;
 }
 
-function generateGameData()
+function generateGameData(): array
 {
     $gameData = [];
 
@@ -26,8 +26,9 @@ function generateGameData()
     return $gameData;
 }
 
-function evenGame()
+function evenGame(): void
 {
     $gameData = generateGameData();
     startGame(DESCRIPTION, $gameData);
+    return;
 }
