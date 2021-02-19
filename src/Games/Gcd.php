@@ -8,7 +8,7 @@ use const Php\Project\Lvl1\GameConfig\GAMES_TO_WIN;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function findGcd($number1, $number2)
+function findGcd(int $number1, int $number2): int
 {
     $gcd = 1;
     $min = min($number1, $number2);
@@ -22,7 +22,7 @@ function findGcd($number1, $number2)
     return $gcd;
 }
 
-function generateGameData()
+function generateGameData(): array
 {
     $gameData = [];
 
@@ -38,8 +38,9 @@ function generateGameData()
     return $gameData;
 }
 
-function gcdGame()
+function gcdGame(): void
 {
     $gameData = generateGameData();
     startGame(DESCRIPTION, $gameData);
+    return;
 }
