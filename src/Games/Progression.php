@@ -8,7 +8,7 @@ use const Php\Project\Lvl1\GameConfig\GAMES_TO_WIN;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function makeProgression($a1, $d, $progressionLength)
+function makeProgression(int $a1, int $d, int $progressionLength): array
 {
     $progression = [];
     for ($i = 0; $i < $progressionLength; $i++) {
@@ -18,7 +18,7 @@ function makeProgression($a1, $d, $progressionLength)
     return $progression;
 }
 
-function generateGameData()
+function generateGameData(): array
 {
     $gameData = [];
 
@@ -39,8 +39,9 @@ function generateGameData()
     return $gameData;
 }
 
-function progressionGame()
+function progressionGame(): void
 {
     $gameData = generateGameData();
     startGame(DESCRIPTION, $gameData);
+    return;
 }
