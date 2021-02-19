@@ -8,7 +8,7 @@ use const Php\Project\Lvl1\GameConfig\GAMES_TO_WIN;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
-function generateGameData()
+function generateGameData(): array
 {
     $gameData = [];
     $operands = ['+', '-', '*'];
@@ -17,6 +17,7 @@ function generateGameData()
         $number1 = rand(1, 100);
         $number2 = rand(1, 100);
         $operand = $operands[rand(0, 2)];
+        $rightAnswer = 0;
 
         switch ($operand) {
             case "+":
@@ -37,8 +38,9 @@ function generateGameData()
     return $gameData;
 }
 
-function calcGame()
+function calcGame(): void
 {
     $gameData = generateGameData();
     startGame(DESCRIPTION, $gameData);
+    return;
 }
